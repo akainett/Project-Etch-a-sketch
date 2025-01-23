@@ -1,0 +1,14 @@
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px; /* Adjust size as needed */
+    height: 960px; /* Should match width to keep squares */
+}
+
+.square {
+    width: calc(100% / 16);
+    height: calc(100% / 16);
+    background-color: #ccc; /* Light gray background */
+    border: 1px solid #000; /* Black border for visibility */
+    box-sizing: border-box; /* Include border in size calculation */
+}
