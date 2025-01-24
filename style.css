@@ -1,3 +1,17 @@
+body {
+    text-align: center;
+    justify-content: center;
+    
+}
+
+#newGridBtn {
+    margin: 20px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
 #grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -6,12 +20,10 @@
 }
 
 .square {
-    width: calc(100% / 16);
-    height: calc(100% / 16);
     background-color: #ccc;
     border: 1px solid #000;
     box-sizing: border-box;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
 }
 
 .square:hover {

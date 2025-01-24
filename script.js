@@ -1,14 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('#grid-container');
+    const newGridBtn = document.querySelector('#newGridBtn');
 
-    // Create 256 squares (16x16)
-    for (let i = 0; i < 256; i++) {
-        const div = document.createElement('div');
-        div.classList.add('square');
-        
-        div.addEventListener('mouseover', function() {
-            this.classList.add("hovered")
-        });
-        container.appendChild(div);
+    function createGrid(size) {
+        // Clear the old grid by setting textContent to an empty string
+        container.textContent = '';
+
+        // Calculate the size of each square
+        const squareSize = 960 / size;
+
+        for (let i = 0; i < size * size; i++) {
+            const square = document.createElement('div');
+            square.classList.add('square');
+            square.style.width = `${squareSize}px`;
+            square.style.height = `${squareSize}px`;
+            
+            square.addEventListener('mouseover', function() {
+                this.classList.add("hovered")
+            });
+            container.appendChild(square);
+        }
     }
+    createGrid(16);
+
+    // When the button is clicked, ask for new grid size
+    newGridBtn.addEventListener('click', function() {
+        let size = prompt("How many squares per side do you want? (Max 100)");
+        
+        if (size !== null && size !== "") {
+            const numberSize = parseInt(size);
+            if (numberSize > 0 && numberSize <= 100) {
+                createGrid(numberSize);
+            } else {
+                alert("Please enter a number between 1 and 100.");
+            }
+        }
+    });
 });
