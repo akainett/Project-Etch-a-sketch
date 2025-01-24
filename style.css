@@ -1,7 +1,6 @@
 body {
-    text-align: center;
-    justify-content: center;
-    
+    font-family: Helvetica, sans-serif;
+    margin-left: 150px;
 }
 
 #newGridBtn {
@@ -9,7 +8,6 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    border: 1px solid black;
 }
 
 #grid-container {
@@ -20,16 +18,8 @@ body {
 }
 
 .square {
-    background-color: #ccc;
+    background-color: #ddd;
     border: 1px solid #000;
     box-sizing: border-box;
     transition: background-color 0.1s;
-}
-
-.square:hover {
-    background-color: #000;
-}
-
-.square.hovered {
-    background-color: #000;
 }

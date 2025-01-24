@@ -16,7 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             square.style.height = `${squareSize}px`;
             
             square.addEventListener('mouseover', function() {
-                this.classList.add("hovered")
+                const red = Math.floor(Math.random() * 256);
+                const green = Math.floor(Math.random() * 256);
+                const blue = Math.floor(Math.random() * 256);
+                this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
             });
             container.appendChild(square);
         }
