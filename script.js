@@ -3,8 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Create 256 squares (16x16)
     for (let i = 0; i < 256; i++) {
-        const square = document.createElement('div');
-        square.classList.add('square');
-        container.appendChild(square);
+        const div = document.createElement('div');
+        div.classList.add('square');
+        
+        div.addEventListener('mouseover', function() {
+            this.classList.add("hovered")
+        });
+        container.appendChild(div);
     }
 });

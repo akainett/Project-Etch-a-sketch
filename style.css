@@ -1,14 +1,23 @@
 #grid-container {
     display: flex;
     flex-wrap: wrap;
-    width: 960px; /* Adjust size as needed */
-    height: 960px; /* Should match width to keep squares */
+    width: 960px;
+    height: 960px;
 }
 
 .square {
     width: calc(100% / 16);
     height: calc(100% / 16);
-    background-color: #ccc; /* Light gray background */
-    border: 1px solid #000; /* Black border for visibility */
-    box-sizing: border-box; /* Include border in size calculation */
+    background-color: #ccc;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.square:hover {
+    background-color: #000;
+}
+
+.square.hovered {
+    background-color: #000;
 }
